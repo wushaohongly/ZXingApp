@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 扫码控件 -->
+    <com.wushaohong.zxing.ScannerView
+        android:id="@+id/sv_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.wushaohong.zxing.ScannerView>
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="相册"
+            android:textSize="16sp"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- 弱光提示，手电筒打开 -->
+    <LinearLayout
+        android:id="@+id/ll_weak_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_flash_lamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_flashlight_close" />
+
+        <TextView
+            android:id="@+id/tv_weak_light_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="轻点照亮"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>
